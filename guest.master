@@ -1,0 +1,195 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="guest.master.cs" Inherits="guest" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blood Bank</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery.smartmenus.bootstrap.css" rel="stylesheet">
+    <link href="css/owl/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl/owl.theme.css" rel="stylesheet" type="text/css" />
+    <link href="css/owl/owl.transitions.css" rel="stylesheet" type="text/css" />
+    <link href="css/1-col-portfolio.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+    <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">   
+    </asp:ContentPlaceHolder>
+
+    <style type="text/css">
+        /* Navbar */
+        .navbar {
+            background-color: #1E3A5F; /* Deep Blue for navbar */
+            border: none;
+            border-radius: 0;
+            height: 60px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            padding: 10px 15px;
+        }
+
+        .navbar-brand img {
+            width: 130px;
+            height: auto;
+        }
+
+        .navbar-nav {
+            float: right;
+            margin-right: 30px;
+        }
+
+        .navbar-inverse .navbar-nav > li {
+            text-align: right;
+        }
+
+        .navbar-inverse .navbar-nav > li > a {
+            color: #FFFFFF !important;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 20px 15px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-inverse .navbar-nav > li > a:hover,
+        .navbar-inverse .navbar-nav > li > a:focus {
+            color: #F7B731 !important; /* Gold color on hover */
+        }
+
+        /* Dropdown Menu */
+        .dropdown-menu {
+            background-color: #1E3A5F;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: right;
+        }
+
+        .dropdown-menu > li > a {
+            color: #FFFFFF !important;
+            padding: 10px 20px;
+            transition: all 0.2s ease;
+            text-align: center;
+        }
+
+        .dropdown-menu > li > a:hover {
+            color: #F7B731 !important; /* Gold color on hover */
+        }
+
+        @media (max-width: 767px) {
+            .navbar-nav {
+                float: none;
+                margin-right: 0;
+            }
+
+            .navbar-inverse .navbar-nav > li > a {
+                padding: 12px 15px;
+                text-align: right;
+            }
+            
+            .navbar-collapse {
+                background-color: #1E3A5F;
+            }
+            
+            .dropdown-menu > li > a {
+                color: #FFFFFF !important;
+                text-align: right;
+            }
+            
+            .dropdown-menu > li > a:hover {
+                color: #F7B731 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Header Navbar fixed top -->
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.aspx">
+                        <img src="img/Mainlogo.png" alt="Logo" />
+                    </a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="guest1.aspx" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="gAbout Initiative.aspx">About Us</a></li>
+                                <li><a href="gHospitalpage.aspx">Hospital</a></li>
+                                <li><a href="gallery.aspx">Gallery</a></li>
+                                <li><a href="gvideos1.aspx">Video</a></li>
+                            </ul>
+                        </li>
+                        <li runat="server" id="home"><a href="gcontact.aspx">Contact Us</a></li>
+                        
+                        <li runat="server" id="Li1"><a href="Guest Services.aspx">Services</a></li>
+                        <li runat="server" id="LiLogin"><a href="login.aspx">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <%-- Main Content --%>
+        <div class="container-fluid">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <footer id="fh5co-footer" class="padding100">
+    <div class="fh5co-footer-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-md-push-3 animated wow fadeInLeft" data-wow-delay="0.2s">
+                    <h3 class="fh5co-lead">Who We Are</h3>
+                    <ul style="list-style-type: none; white-space: normal;">
+                        <li><a href="gAbout Initiative.aspx">About Initiative</a></li>
+                        <li><a href="#">Donation Conditions</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="Bloodinformation.aspx">Blood Information</a></li>
+                        <li><a href="gContactUs.aspx">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-4 col-md-push-3 animated wow fadeInLeft" data-wow-delay="0.4s">
+                    <h3 class="fh5co-lead">Services</h3>
+                    <ul style="list-style-type: none">
+                        <li><a href="Donar.aspx">Search Donor</a></li>
+                        <li><a href="bloodtype.aspx">Search Blood Type</a></li>
+                        <li><a href="#">Register as New Donor</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-4 col-md-push-3 animated wow fadeInLeft" data-wow-delay="0.6s">
+                    <h3 class="fh5co-lead">Additional Links</h3>
+                    <ul style="list-style-type: none">
+                        <li><a href="http://www.mohp.gov.eg/" target="_blank">Ministry of Health</a></li>
+                        <li><a href="http://bloodegy.weebly.com/" target="_blank">Egyptian Blood Bank</a></li>
+                        <li><a href="http://www.egyptianrc.org/arabic/home.aspx" target="_blank">Red Crescent</a></li>
+                        <li><a href="http://www.freeblood.com/" target="_blank">Arab Blood Donors</a></li>
+                        <li><a href="http://www.bloodbanker.com/" target="_blank">Blood Donors</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+         <div class="row text-center mt-4">
+                <p><br /><b>&copy; 2025 Blood Donor Management System. All rights reserved.<br /> Developed by Amit Sharma, Pooja Sharma, Nishad Kusum. </b></p>
+            </div>
+    </div>
+</footer>
+
+    </form>
+</body>
+</html>
